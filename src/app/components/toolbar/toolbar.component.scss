@@ -1,0 +1,42 @@
+@import "../../../styles.scss";
+
+.toolbar {
+  &-title {
+    color: $c-primary;
+    margin-bottom: 0;
+  }
+
+  &-content {
+    background-color: $header-bg;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include block-padding;
+
+    @media screen and (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+}
+
+:host ::ng-deep {
+  .toolbar {
+    &-ng {
+      color: red;
+    }
+    &-link {
+      font-size: 20px;
+      color: $c-font-light;
+      font-weight: bold;
+    }
+
+    &-nav {
+      @media screen and (max-width: $mobile) {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

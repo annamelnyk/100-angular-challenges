@@ -1,0 +1,12 @@
+@import "../../../styles.scss";
+
+.app-header {
+  @include block-padding;
+
+  &-title {
+    color: $c-primary;
+    font-weight: bold;
+    margin-bottom: 0;
+    text-align: center;
+  }
+}

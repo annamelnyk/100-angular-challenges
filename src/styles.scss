@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/variables";
+@import "@fortawesome/fontawesome-free/css/all.css";
+
+@import "./styles/colors";
+@import "./styles/variables";
+@import "./styles/mixins";
+
+* {
+  box-sizing: border-box;
+  font: 18px "Courier New", monospace;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  color: $c-font-dark;
+  font-size: $text-desktop-font-size;
+
+  @media screen and (max-width: $tablet) {
+    font-size: $text-tablet-font-size;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  text-align: center;
+  margin-bottom: 0;
+  font-weight: bold;
+}
+
+h3 {
+  @media screen and (max-width: $tablet) {
+    font-size: $header-tablet-font-size;
+  }
+}
+
+.block-bg {
+  background-color: $block-bg;
+  @include box-shadow;
+}
