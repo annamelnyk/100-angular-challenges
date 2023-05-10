@@ -1,0 +1,25 @@
+@import "../../../styles";
+
+.card {
+  @include margin-bottom();
+  
+  &-header {
+    background-color: $green;
+    @include block-padding();
+    @include box-shadow();
+    display: flex;
+    align-items: center;
+  }
+
+  i,
+  h3,
+  h5 {
+    color: $c-font-light;
+  }
+
+  &-body,
+  &-footer {
+    @include block-padding();
+    color: $c-font-dark;
+  }
+}

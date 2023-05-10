@@ -1,6 +1,10 @@
-@import "../../../styles.scss";
+@import "../../../styles";
 
 .toolbar {
+  &-container {
+    @include margin-bottom();
+  }
+
   &-title {
     color: $c-primary;
     margin-bottom: 0;
@@ -11,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include block-padding;
+    @include block-padding();
 
     @media screen and (max-width: $tablet) {
       flex-direction: column;
