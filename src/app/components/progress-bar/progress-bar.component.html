@@ -1,0 +1,7 @@
+<div class="progress-bar-container">
+  <div class="progress-bar-outer">
+    <span class="progress-bar-value">{{progressValue}}</span>
+    <div class="progress-bar-inner" [style.width.%]="progressValue"></div>
+  </div>
+  <button (click)="onUpdate()" class="progress-bar-button">Update</button>    
+</div>

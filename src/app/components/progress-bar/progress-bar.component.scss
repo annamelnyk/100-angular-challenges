@@ -1,0 +1,38 @@
+@import "../../../styles";
+
+.progress-bar {
+  &-outer {
+    height: 20px;
+    background-color: $light-grey;
+    border-radius: 10px;
+    position: relative;
+  }
+
+  &-inner {
+    height: 20px;
+    background-color: $blue;
+    border-radius: 10px;
+    transition: width 2s ease-in-out;
+  }
+
+  &-container {
+    @include block-padding();
+  }
+
+  &-value {
+    color: $c-font-light;
+    font-size: 18px;
+    font-weight: bolder;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50, 0);
+  }
+
+  &-button {
+    padding: 5px 20px;
+    border-radius: 15px;
+    outline: none;
+    margin-top: 15px;
+    cursor: pointer;
+  }
+}

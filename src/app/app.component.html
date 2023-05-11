@@ -11,6 +11,20 @@
     </nav>
   </app-toolbar>
   <app-card
+    title="Progress Bar"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <app-progress-bar body [updatedProgressValue]="progressBarValue"></app-progress-bar>
+  </app-card>
+  <app-card
+    title="Accordion"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <app-accordion body [accordionContent]="accordionContent"></app-accordion>
+  </app-card>
+  <app-card
     title="Card"
     subTitle="Component"
     iconClass="fa-solid fa-circle-exclamation"
@@ -18,12 +32,4 @@
     <p body>Card body</p>
     <p footer>Card footer</p>
   </app-card>
-  <app-card
-    title="Accordion"
-    subTitle="Component"
-    iconClass="fa-solid fa-circle-exclamation"
-  >
-  <app-accordion body [accordionContent]="accordionContent"></app-accordion>
-  </app-card>
-  
 </div>

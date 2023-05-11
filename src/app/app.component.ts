@@ -17,4 +17,5 @@ export class AppComponent {
   ];
 
   public accordionContent: IAccordionItem[] = accordionData;
+  public progressBarValue: number = 75;
 }
