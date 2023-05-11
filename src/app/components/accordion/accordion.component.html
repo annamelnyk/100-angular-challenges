@@ -1,0 +1,22 @@
+<div class="accordion-body">
+  <div class="accordion-block" *ngFor="let content of accordionContent">
+    <div
+      class="accordion-block-title border border-1"
+      (click)="onToggleAccordion(content)"
+    >
+      <h4>{{ content.title }}</h4>
+      <div
+        class="accordion-block-icon"
+        [class.is-expanded]="content.isExpanded"
+      >
+        <i class="fa-solid fa-angle-down"></i>
+      </div>
+    </div>
+    <div
+      class="accordion-block-body border border-1"
+      [class.is-expanded]="content.isExpanded"
+    >
+      <p>{{ content.body }}</p>
+    </div>
+  </div>
+</div>

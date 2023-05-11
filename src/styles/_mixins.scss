@@ -10,3 +10,15 @@
 @mixin margin-bottom {
   margin-bottom: 15px;
 }
+
+@mixin showHideElement($value) {
+  min-height: 0;
+  transition: max-height .5s ease-in-out;
+  max-height: $value;
+  overflow: auto;
+}
+
+@mixin rotateIcon($value) {
+  transform: rotate($value);
+  transition: all 0.4s ease-in-out;
+}

@@ -1,0 +1,32 @@
+@import "../../../styles";
+
+.accordion {
+  &-block {
+    &-title {
+      text-align: left;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 0 15px;
+    }
+    &-body {
+      margin-bottom: 0;
+
+      @include showHideElement(200px);
+
+      &.is-expanded {
+        @include showHideElement(0);
+      }
+    }
+
+    &-icon {
+      padding: 15px;
+      @include rotateIcon(180deg);
+
+      &.is-expanded {
+        @include rotateIcon(0deg);
+      }
+    }
+  }
+}
