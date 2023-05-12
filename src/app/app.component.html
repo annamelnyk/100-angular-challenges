@@ -12,14 +12,22 @@
   </app-toolbar>
 
   <app-card
+    title="Top Of the Page"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <div body>
+      <p>Top Of the Page will appear after scrolling down to 400px</p>
+      <app-top-of-page></app-top-of-page>
+    </div>
+  </app-card>
+
+  <app-card
     title="Star Rating"
     subTitle="Component"
     iconClass="fa-solid fa-circle-exclamation"
   >
-    <app-star-rating
-      body
-      [rating]="2.5"
-    ></app-star-rating>
+    <app-star-rating body [rating]="2.5"></app-star-rating>
   </app-card>
 
   <app-card
