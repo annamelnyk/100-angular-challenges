@@ -1,0 +1,13 @@
+<div class="star-rating-container crop">
+  <div class="star-rating-block">
+    <span
+      class="fa fa-star star-rating-icon"
+      *ngFor="let star of fullStars"
+    ></span>
+    <span class="fa fa-star-half-alt star-rating-icon" *ngIf="hasHalfStar"></span>  
+    <span
+      class="far fa-star star-rating-icon"
+      *ngFor="let star of emptyStars"
+    ></span>
+  </div>
+</div>

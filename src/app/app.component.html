@@ -10,13 +10,29 @@
       >
     </nav>
   </app-toolbar>
+
+  <app-card
+    title="Star Rating"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <app-star-rating
+      body
+      [rating]="2.5"
+    ></app-star-rating>
+  </app-card>
+
   <app-card
     title="Progress Bar"
     subTitle="Component"
     iconClass="fa-solid fa-circle-exclamation"
   >
-    <app-progress-bar body [updatedProgressValue]="progressBarValue"></app-progress-bar>
+    <app-progress-bar
+      body
+      [updatedProgressValue]="progressBarValue"
+    ></app-progress-bar>
   </app-card>
+
   <app-card
     title="Accordion"
     subTitle="Component"
@@ -24,6 +40,7 @@
   >
     <app-accordion body [accordionContent]="accordionContent"></app-accordion>
   </app-card>
+
   <app-card
     title="Card"
     subTitle="Component"

@@ -1,0 +1,29 @@
+@import "../../../styles";
+
+.star-rating {
+  @include block-padding();
+
+  &-container {
+    &.crop {
+      overflow: hidden;
+    }
+  }
+
+  &-icon {
+    display: inline-block;
+    position: relative;
+    //font-size: 100px;
+    color: $yellow;
+
+    // &::after {
+    //   font-family: FontAwesome;
+    //   content: "\f005";
+    //   position: absolute;
+    //   left: 0;
+    //   top: 0;
+    //   // width: 60%;
+    //   overflow: hidden;
+    //   //color: #f80;
+    // }
+  }
+}
