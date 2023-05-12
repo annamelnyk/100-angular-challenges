@@ -1,14 +1,14 @@
 @import "../../../styles";
 
 .top-of-the-page {
-  @include animateAppearing(120px, 120px, 50px);
+  @include animateAppearing(100px, 100px, 46px);
   @include box-shadow();
   position: fixed;
   bottom: 50px;
   right: 50px;
 
-  width: 120px;
-  height: 120px;
+  width: 100px;
+  height: 100px;
   border-radius: 50%;
   background-color: $red;
   cursor: pointer;
@@ -31,7 +31,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     color: $c-font-light;
-    font-size: 50px;
+    font-size: 46px;
 
     @media screen and (max-width: $tablet) {
       font-size: 40px;

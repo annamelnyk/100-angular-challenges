@@ -1,0 +1,46 @@
+<app-card
+    title="Top Of the Page"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <div body>
+      <p>Top Of the Page will appear after scrolling down to 400px</p>
+      <app-top-of-page></app-top-of-page>
+    </div>
+  </app-card>
+
+  <app-card
+    title="Star Rating"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <app-star-rating body [rating]="2.5"></app-star-rating>
+  </app-card>
+
+  <app-card
+    title="Progress Bar"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <app-progress-bar
+      body
+      [updatedProgressValue]="progressBarValue"
+    ></app-progress-bar>
+  </app-card>
+
+  <app-card
+    title="Accordion"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <app-accordion body [accordionContent]="accordionContent"></app-accordion>
+  </app-card>
+
+  <app-card
+    title="Card"
+    subTitle="Component"
+    iconClass="fa-solid fa-circle-exclamation"
+  >
+    <p body>Card body</p>
+    <p footer>Card footer</p>
+  </app-card>
