@@ -1,13 +1,25 @@
 import { Routes } from '@angular/router';
 
-import { DocumentationComponentsComponent } from './components/documentation-components/documentation-components.component';
-import { DocumentationPipesComponent } from './pipes/documentation-pipes/documentation-pipes.component';
-import { DocumentationDirectivesComponent } from './directives/documentation-directives/documentation-directives.component';
-import { DocumentationServicesComponent } from './services/documentation-services/documentation-services.component';
-
 export const APP_ROUTES: Routes = [
-  { path: '', component: DocumentationComponentsComponent },
-  { path: 'pipes', component: DocumentationPipesComponent },
-  { path: 'directives', component: DocumentationDirectivesComponent },
-  { path: 'services', component: DocumentationServicesComponent },
+  {
+    path: 'components',
+    loadChildren: () =>
+      import('./components/components.module').then((m) => m.ComponentsModule),
+  },
+  {
+    path: 'pipes',
+    // Lazy Loading Route
+    loadChildren: () =>
+      import('./pipes/pipes.module').then((m) => m.PipesModule),
+  },
+  {
+    path: 'directives',
+    loadChildren: () =>
+      import('./directives/directives.module').then((m) => m.DirectivesModule),
+  },
+  {
+    path: 'services',
+    loadChildren: () =>
+      import('./services/services.module').then((m) => m.ServicesModule),
+  },
 ];
