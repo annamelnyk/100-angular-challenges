@@ -4,21 +4,20 @@ import { RouterModule } from '@angular/router';
 
 import { DocumentationComponentsComponent } from './documentation-components/documentation-components.component';
 import { COMPONENT_ROUTES } from './components.routes';
-import { CardComponent } from './card/card.component';
 import { AccordionComponent } from './accordion/accordion.component';
 import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { TopOfPageComponent } from './top-of-page/top-of-page.component';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [
-    CardComponent,
     AccordionComponent,
     ProgressBarComponent,
     StarRatingComponent,
     TopOfPageComponent,
     DocumentationComponentsComponent,
   ],
-  imports: [CommonModule, RouterModule.forChild(COMPONENT_ROUTES)],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(COMPONENT_ROUTES)],
 })
 export class ComponentsModule {}

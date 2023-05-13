@@ -1,1 +1,12 @@
-<p>documentation-pipes works!</p>
+<app-card
+  title="Truncate"
+  subTitle="Pipe"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <p body>
+    {{
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum a qui unde illo assumenda ipsum dolorem tenetur? Similique, porro beatae eveniet esse, aliquid doloribus enim, dolorum facere accusamus facilis deleniti!"
+        | truncate : 55 : "[...]"
+    }}
+  </p>
+</app-card>

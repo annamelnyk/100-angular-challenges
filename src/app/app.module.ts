@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ToolbarComponent } from './components/toolbar/toolbar.component';
 import { HeaderComponent } from './components/header/header.component';
 import { APP_ROUTES } from './app.routes';
+import { PipesModule } from './pipes/pipes.module';
 
 @NgModule({
   declarations: [

@@ -4,9 +4,10 @@ import { RouterModule } from '@angular/router';
 
 import { DocumentationServicesComponent } from './documentation-services/documentation-services.component';
 import { SERVICES_ROUTES } from './services.routes';
+import { SharedModule } from '../shared/shared.module';
 
 @NgModule({
   declarations: [DocumentationServicesComponent],
-  imports: [CommonModule, RouterModule.forChild(SERVICES_ROUTES)],
+  imports: [CommonModule, SharedModule, RouterModule.forChild(SERVICES_ROUTES)],
 })
 export class ServicesModule {}
