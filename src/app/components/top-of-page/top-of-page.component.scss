@@ -7,22 +7,22 @@
   bottom: 50px;
   right: 50px;
 
-  width: 100px;
-  height: 100px;
+  width: $s-circle-desktop;
+  height: $s-circle-desktop;
   border-radius: 50%;
   background-color: $red;
   cursor: pointer;
-  z-index: 2;
+  z-index: $z-top-of-page;
 
   @media screen and (max-width: $tablet) {
-    @include animateAppearing(80px, 80px, 40px);
-    width: 80px;
-    height: 80px;
+    @include animateAppearing($s-circle-tablet, $s-circle-tablet, 40px);
+    width: $s-circle-tablet;
+    height: $s-circle-tablet;
   }
   @media screen and (max-width: $mobile) {
-    @include animateAppearing(50px, 50px, 30px);
-    width: 50px;
-    height: 50px;
+    @include animateAppearing($s-circle-mobile, $s-circle-mobile, 30px);
+    width: $s-circle-mobile;
+    height: $s-circle-mobile;
   }
 
   &-icon {

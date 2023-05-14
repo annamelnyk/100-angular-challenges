@@ -1,0 +1,33 @@
+@import "../../../styles";
+
+.loader {
+  &-overlay {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    height: 100%;
+    z-index: $z-overlay;
+    backdrop-filter: blur(4px);
+  }
+
+  &-circle {
+    border: 10px solid $light-grey;
+    border-top: 10px solid $blue;
+    border-radius: 50%;
+    width: $s-circle-desktop;
+    height: $s-circle-desktop;
+    @include spinLoader();
+    @include centerPosition($z-loader);
+
+    @media screen and (max-width: $tablet) {
+      width: $s-circle-tablet;
+      height: $s-circle-tablet;
+    }
+    @media screen and (max-width: $mobile) {
+      width: $s-circle-mobile;
+      height: $s-circle-mobile;
+    }
+  }
+}

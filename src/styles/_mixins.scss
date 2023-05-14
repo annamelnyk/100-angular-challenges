@@ -37,5 +37,28 @@
     }
   }
 
-  animation: appearing .5s;
+  animation: appearing 0.5s;
 }
+
+@mixin centerPosition($z-index) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50, -50);
+  z-index: $z-index;
+}
+
+@mixin spinLoader() {
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+
+  animation: spin 2s linear infinite;
+}
+
+

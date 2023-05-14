@@ -9,6 +9,7 @@ import { ProgressBarComponent } from './progress-bar/progress-bar.component';
 import { StarRatingComponent } from './star-rating/star-rating.component';
 import { TopOfPageComponent } from './top-of-page/top-of-page.component';
 import { SharedModule } from '../shared/shared.module';
+import { LoaderComponent } from './loader/loader.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { SharedModule } from '../shared/shared.module';
     StarRatingComponent,
     TopOfPageComponent,
     DocumentationComponentsComponent,
+    LoaderComponent,
   ],
   imports: [CommonModule, SharedModule, RouterModule.forChild(COMPONENT_ROUTES)],
 })
