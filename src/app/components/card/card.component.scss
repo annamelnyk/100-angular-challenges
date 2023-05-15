@@ -2,7 +2,7 @@
 
 .card {
   @include margin-bottom();
-  
+
   &-header {
     background-color: $green;
     @include block-padding();

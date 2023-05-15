@@ -13,6 +13,11 @@
       [isReadOnly]="true"
     ></app-credit-card-input>
   </div>
+  <p footer>
+    Create a credit card input that when in readonly mode x out everything but
+    last 4 digits, displays an icon for amex, visa, mastercard or discover. If
+    no match fall back to a generic card.
+  </p>
 </app-card>
 
 <app-card
@@ -21,6 +26,10 @@
   iconClass="fa-solid fa-circle-exclamation"
 >
   <app-loader body [isLoading]="false"></app-loader>
+  <p footer>
+    Create a circular loader component that can be turned on and off. Has an
+    overlay with a blur effect.
+  </p>
 </app-card>
 
 <app-card
@@ -32,6 +41,10 @@
     <p>Top Of the Page will appear after scrolling down to 400px</p>
     <app-top-of-page></app-top-of-page>
   </div>
+  <p footer>
+    Build a top of page component that is displayed when pass the 400px and when
+    clicked brings you to the top of the page.
+  </p>
 </app-card>
 
 <app-card
@@ -40,6 +53,10 @@
   iconClass="fa-solid fa-circle-exclamation"
 >
   <app-star-rating body [rating]="2.5"></app-star-rating>
+  <p footer>
+    Build a star ratings component that takes in a rating and renders out the
+    correct amount of stars up to 5 including half stars and empty stars.
+  </p>
 </app-card>
 
 <app-card
@@ -51,6 +68,10 @@
     body
     [updatedProgressValue]="progressBarValue"
   ></app-progress-bar>
+  <p footer>
+    Build a progress bar component that takes in a value and defaults to a max
+    of 100. Add an animation when the value increases or decreases.
+  </p>
 </app-card>
 
 <app-card
@@ -59,6 +80,11 @@
   iconClass="fa-solid fa-circle-exclamation"
 >
   <app-accordion body [accordionContent]="accordionContent"></app-accordion>
+  <p footer>
+    Build a basic accordion component that takes in a list of accordion content.
+    Accordion content will include a title, content(string only) and something
+    to control if the accordion is opened or closed.
+  </p>
 </app-card>
 
 <app-card
@@ -67,5 +93,11 @@
   iconClass="fa-solid fa-circle-exclamation"
 >
   <p body>Card body</p>
-  <p footer>Card footer</p>
+  <div footer>
+    <p>Card footer</p>
+    <p>
+      Build a basic card component that takes in an icon, the title, & subtitle.
+      It also takes in nested body content and nested footer content.
+    </p>
+  </div>
 </app-card>
