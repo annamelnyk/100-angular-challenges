@@ -25,7 +25,13 @@
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"
 >
-  <app-loader body [isLoading]="false"></app-loader>
+  <div body>
+    <app-loader [isLoading]="isCircularLoaderOn"></app-loader>
+    <button (click)="turnOnLoader()" type="button" class="btn btn-danger my-3">
+      Turn On Loader
+    </button>
+  </div>
+
   <p footer>
     Create a circular loader component that can be turned on and off. Has an
     overlay with a blur effect.

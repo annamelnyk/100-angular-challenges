@@ -11,4 +11,9 @@ import { accordionData } from 'src/app/data';
 export class DocumentationComponentsComponent {
   public accordionContent: IAccordionItem[] = accordionData;
   public progressBarValue: number = 75;
+  public isCircularLoaderOn: boolean = false;
+
+  turnOnLoader() {
+    this.isCircularLoaderOn = true;
+  }
 }
