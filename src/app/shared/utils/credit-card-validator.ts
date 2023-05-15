@@ -38,10 +38,26 @@ export const typeOfCreditCard = (cardNumber: string): string => {
     case 3:
       type = 'americanExpress';
       break;
-      
+
     default:
       type = 'default';
   }
 
   return type;
+};
+
+export const creditCardNumberDashed = (creditCardNumber: string): string => {
+  const creditCardCharacters = [];
+  const SEPARATOR = '-';
+  const creditCardLength = creditCardNumber.length;
+
+  for (let i = 0; i < creditCardLength; i++) {
+    if (i !== 0 && i % 4 === 0) {
+      creditCardCharacters.push(SEPARATOR);
+    }
+
+    creditCardCharacters.push(creditCardNumber[i]);
+  }
+
+  return creditCardCharacters.join('');
 };

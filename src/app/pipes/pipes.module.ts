@@ -7,6 +7,7 @@ import { PIPES_ROUTES } from './pipes.routes';
 import { SharedModule } from '../shared/shared.module';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
+import { CreditCardEncriptedPipe } from './creditCardEncripted/credit-card-encripted.pipe';
 
 @NgModule({
   declarations: [DocumentationPipesComponent, TruncatePipe],

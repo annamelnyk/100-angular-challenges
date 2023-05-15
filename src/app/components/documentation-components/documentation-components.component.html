@@ -3,7 +3,16 @@
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"
 >
-  <app-credit-card-input body></app-credit-card-input>
+  <div body>
+    <app-credit-card-input
+      [creditCardNumber]="'1111222233334444'"
+      [isReadOnly]="false"
+    ></app-credit-card-input>
+    <app-credit-card-input
+      [creditCardNumber]="'1111222233335555'"
+      [isReadOnly]="true"
+    ></app-credit-card-input>
+  </div>
 </app-card>
 
 <app-card

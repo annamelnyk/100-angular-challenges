@@ -1,13 +1,13 @@
 @import "../../../styles";
 
 .credit-card {
-  width: 400px;
-
   &-container {
+    width: 400px;
     border: 2px solid $light-grey;
     display: flex;
     align-items: center;
     @include block-padding();
+    margin-bottom: 15px;
 
     &.isFullFilled {
       border-color: $blue;
@@ -15,10 +15,6 @@
 
     &.error {
       border-color: $red;
-    }
-
-    &:last-child {
-      border-top: none;
     }
   }
 
