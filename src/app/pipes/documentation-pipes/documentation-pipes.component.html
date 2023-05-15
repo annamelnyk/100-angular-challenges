@@ -1,4 +1,18 @@
 <app-card
+  title="Credit Card Formatter"
+  subTitle="Pipe"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <p>{{ "1111222233334444" | creditCardFormatter }}</p>
+    <p>{{ "111122223333444" | creditCardFormatter }}</p>
+    <p>{{ "11112222333344" | creditCardFormatter }}</p>
+    <p>{{ "11112222333344445555" | creditCardFormatter }}</p>
+    <p>{{ "1111222233hhhh44" | creditCardFormatter }}</p>
+  </div>
+</app-card>
+
+<app-card
   title="Truncate"
   subTitle="Pipe"
   iconClass="fa-solid fa-circle-exclamation"
