@@ -1,0 +1,33 @@
+@import "../../../styles";
+
+.credit-card {
+  width: 400px;
+
+  &-container {
+    border: 2px solid $light-grey;
+    display: flex;
+    align-items: center;
+    @include block-padding();
+
+    &.isFullFilled {
+      border-color: $blue;
+    }
+
+    &.error {
+      border-color: $red;
+    }
+
+    &:last-child {
+      border-top: none;
+    }
+  }
+
+  &-input {
+    border: none;
+    outline: none;
+  }
+
+  &-icon {
+    margin-right: 15px;
+  }
+}

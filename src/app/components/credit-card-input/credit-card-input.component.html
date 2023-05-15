@@ -1,0 +1,39 @@
+<div class="credit-card">
+  <div
+    class="credit-card-container"
+    [class.isFullFilled]="isFullFilled"
+    [class.error]="!isValid"
+  >
+    <div class="credit-card-icon-container" [ngSwitch]="creditCardType">
+      <i
+        class="fa-brands fa-cc-visa credit-card-icon"
+        *ngSwitchCase="'visa'"
+      ></i>
+      <i
+        class="fa-brands fa-cc-mastercard credit-card-icon"
+        *ngSwitchCase="'mastercard'"
+      ></i>
+      <i
+        class="fa-brands fa-cc-amex credit-card-icon"
+        *ngSwitchCase="'americanExpress'"
+      ></i>
+      <i class="fa-solid fa-credit-card credit-card-icon" *ngSwitchDefault></i>
+    </div>
+    <input
+      type="text"
+      class="credit-card-input"
+      [(ngModel)]="creditCardNumber"
+      (ngModelChange)="getCreditCardNumber($event)"
+    />
+  </div>
+  <div class="credit-card-container">
+    <i class="fa-solid fa-credit-card credit-card-icon"></i>
+    <input
+      *ngIf="isFullFilled && isValid"
+      type="text"
+      class="credit-card-input"
+      readonly
+      [value]="creditCardNumber | creditCardFormatter"
+    />
+  </div>
+</div>

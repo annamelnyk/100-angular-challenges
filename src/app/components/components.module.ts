@@ -1,3 +1,4 @@
+import { FormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
@@ -10,6 +11,7 @@ import { StarRatingComponent } from './star-rating/star-rating.component';
 import { TopOfPageComponent } from './top-of-page/top-of-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { LoaderComponent } from './loader/loader.component';
+import { CreditCardInputComponent } from './credit-card-input/credit-card-input.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +21,13 @@ import { LoaderComponent } from './loader/loader.component';
     TopOfPageComponent,
     DocumentationComponentsComponent,
     LoaderComponent,
+    CreditCardInputComponent,
   ],
-  imports: [CommonModule, SharedModule, RouterModule.forChild(COMPONENT_ROUTES)],
+  imports: [
+    CommonModule,
+    FormsModule,
+    SharedModule,
+    RouterModule.forChild(COMPONENT_ROUTES),
+  ],
 })
 export class ComponentsModule {}
