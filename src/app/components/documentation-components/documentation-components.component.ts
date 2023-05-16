@@ -1,19 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 
-import { IAccordionItem } from 'src/app/types';
+import { IAccordionItem, LoaderType } from 'src/app/types';
 import { accordionData } from 'src/app/data';
 
 @Component({
   selector: 'app-documentation-components',
   templateUrl: './documentation-components.component.html',
-  styleUrls: ['./documentation-components.component.scss']
+  styleUrls: ['./documentation-components.component.scss'],
 })
 export class DocumentationComponentsComponent {
   public accordionContent: IAccordionItem[] = accordionData;
   public progressBarValue: number = 75;
-  public isCircularLoaderOn: boolean = false;
+  public isLoaderOn: boolean = false;
+  public loaderType: LoaderType = LoaderType.Loading;
 
-  turnOnLoader() {
-    this.isCircularLoaderOn = true;
+  @HostListener('document:keydown', ['$event'])
+  onKeydownHandler(event: KeyboardEvent) {
+    if (event.key === 'Escape') {
+      this.isLoaderOn = false;
+    }
+  }
+
+  turnOnCircularLoader() {
+    this.loaderType = LoaderType.Circular;
+    this.isLoaderOn = true;
+  }
+
+  turnOnLoadingLoader() {
+    this.loaderType = LoaderType.Loading;
+    this.isLoaderOn = true;
   }
 }

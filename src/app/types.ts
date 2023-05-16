@@ -3,3 +3,8 @@ export interface IAccordionItem {
   body: string;
   isExpanded: boolean;
 }
+
+export enum LoaderType {
+  Circular = 'Circular',
+  Loading = 'Loading',
+}

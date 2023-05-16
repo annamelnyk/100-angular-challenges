@@ -1,3 +1,12 @@
 <div class="loader-overlay" *ngIf="isLoading">
-  <div class="loader-circle"></div>
+  <div class="loader-container">
+    <ng-container [ngSwitch]="loaderType">
+      <div class="loader-circle" *ngSwitchCase="LoaderType.Circular"></div>
+      <div class="loader-loading" *ngSwitchCase="LoaderType.Loading">
+        Loading<span class="loader-period">.</span>
+        <span class="loader-period">.</span>
+        <span class="loader-period">.</span>
+      </div>
+    </ng-container>
+  </div>
 </div>
