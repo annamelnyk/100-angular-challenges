@@ -12,6 +12,7 @@ import { TopOfPageComponent } from './top-of-page/top-of-page.component';
 import { SharedModule } from '../shared/shared.module';
 import { LoaderComponent } from './loader/loader.component';
 import { CreditCardInputComponent } from './credit-card-input/credit-card-input.component';
+import { TwitterPostComponent } from './twitter-post/twitter-post/twitter-post.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { CreditCardInputComponent } from './credit-card-input/credit-card-input.
     DocumentationComponentsComponent,
     LoaderComponent,
     CreditCardInputComponent,
+    TwitterPostComponent,
   ],
   imports: [
     CommonModule,

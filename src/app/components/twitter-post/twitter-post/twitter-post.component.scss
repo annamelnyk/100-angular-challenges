@@ -1,0 +1,11 @@
+@import "../../../../styles";
+
+.twitter {
+  &-share-button {
+  }
+
+  &-icon {
+    font-size: 50px;
+    color: $blue;
+  }
+}
