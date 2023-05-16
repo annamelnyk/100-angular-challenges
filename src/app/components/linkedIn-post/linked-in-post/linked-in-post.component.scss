@@ -1,11 +1,8 @@
 @import "../../../../styles";
 
-.twitter {
-  &-share-button {
-  }
-
+.linkedIn {
   &-icon {
     @include socialMediaIcon();
-    color: $blue;
+    color: #0A66C2;
   }
 }

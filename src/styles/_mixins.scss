@@ -77,4 +77,15 @@
   animation: loading 2s linear infinite;
 }
 
+@mixin socialMediaIcon() {
+  font-size: $social-media-icon-size-desktop;
+  cursor: pointer;
 
+  @media screen and (max-width: $tablet) {
+    font-size: $social-media-icon-size-tablet;
+  }
+
+  @media screen and (max-width: $mobile) {
+    font-size: $social-media-icon-size-mobile;
+  }
+}
