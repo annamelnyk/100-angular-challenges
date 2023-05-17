@@ -14,6 +14,7 @@ import { LoaderComponent } from './loader/loader.component';
 import { CreditCardInputComponent } from './credit-card-input/credit-card-input.component';
 import { TwitterPostComponent } from './twitter-post/twitter-post/twitter-post.component';
 import { LinkedInPostComponent } from './linkedIn-post/linked-in-post/linked-in-post.component';
+import { ModalComponent } from './modal/modal.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { LinkedInPostComponent } from './linkedIn-post/linked-in-post/linked-in-
     CreditCardInputComponent,
     TwitterPostComponent,
     LinkedInPostComponent,
+    ModalComponent
   ],
   imports: [
     CommonModule,

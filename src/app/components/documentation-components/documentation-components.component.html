@@ -1,4 +1,28 @@
 <app-card
+  title="Modal"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <app-modal title="Modal title" [isShown]="isModalOpen">
+      <div modalBody class="modalEl-body">
+        Minim cillum sunt aute id eiusmod quis. Officia exercitation officia
+        laborum reprehenderit elit cupidatat officia ad pariatur voluptate. Ex
+        minim eu in nisi enim ipsum laboris.
+      </div>
+    </app-modal>
+
+    <button (click)="showHideModal()" type="button" class="btn btn-danger m-3">
+      {{ isModalOpen ? "Close" : "Open" }} Modal
+    </button>
+  </div>
+  <p footer>
+    Build a modal component that takes in a title, renders nested content to the
+    body, and has an overlay.
+  </p>
+</app-card>
+
+<app-card
   title="LinkedIn Post"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"

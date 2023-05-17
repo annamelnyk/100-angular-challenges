@@ -1,0 +1,39 @@
+@import "../../../styles";
+
+.modalEl {
+  @include centerPosition($z-modal);
+  @include box-shadow();
+  @include block-padding();
+
+  background-color: $c-font-light;
+  border-radius: 15px;
+  width: 500px;
+  min-height: 400px;
+
+  &-overlay {
+    @include overlay();
+  }
+
+  &-header,
+  &-body {
+    @include block-padding();
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &-close {
+    color: $c-font-dark;
+    font-size: 30px;
+    cursor: pointer;
+  }
+}
+
+:host ::ng-deep {
+  .modalEl-body {
+    margin: 25px 0;
+  }
+}

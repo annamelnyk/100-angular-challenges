@@ -13,12 +13,18 @@ export class DocumentationComponentsComponent {
   public progressBarValue: number = 75;
   public isLoaderOn: boolean = false;
   public loaderType: LoaderType = LoaderType.Loading;
+  public isModalOpen: boolean = false;
 
   @HostListener('document:keydown', ['$event'])
   onKeydownHandler(event: KeyboardEvent) {
     if (event.key === 'Escape') {
       this.isLoaderOn = false;
+      this.isModalOpen = false;
     }
+  }
+
+  public showHideModal() {
+    this.isModalOpen = !this.isModalOpen;
   }
 
   turnOnCircularLoader() {
