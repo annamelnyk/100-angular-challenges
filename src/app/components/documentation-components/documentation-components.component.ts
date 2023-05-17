@@ -1,4 +1,9 @@
-import { Component, HostListener } from '@angular/core';
+import {
+  Component,
+  HostListener,
+  signal,
+  WritableSignal,
+} from '@angular/core';
 
 import { IAccordionItem, LoaderType } from 'src/app/types';
 import { accordionData } from 'src/app/data';
@@ -13,18 +18,21 @@ export class DocumentationComponentsComponent {
   public progressBarValue: number = 75;
   public isLoaderOn: boolean = false;
   public loaderType: LoaderType = LoaderType.Loading;
-  public isModalOpen: boolean = false;
+  public isModalOpen: WritableSignal<boolean> = signal<boolean>(false);
 
   @HostListener('document:keydown', ['$event'])
   onKeydownHandler(event: KeyboardEvent) {
     if (event.key === 'Escape') {
       this.isLoaderOn = false;
-      this.isModalOpen = false;
     }
   }
 
   public showHideModal() {
-    this.isModalOpen = !this.isModalOpen;
+    this.isModalOpen.update((value: boolean) => (value = !value));
+  }
+
+  public closeModal() {
+    this.isModalOpen.set(false);
   }
 
   turnOnCircularLoader() {

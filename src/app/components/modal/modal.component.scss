@@ -19,6 +19,10 @@
     @include block-padding();
   }
 
+  &-body {
+    margin: 25px 0;
+  }
+
   &-header {
     display: flex;
     align-items: center;
@@ -32,8 +36,3 @@
   }
 }
 
-:host ::ng-deep {
-  .modalEl-body {
-    margin: 25px 0;
-  }
-}

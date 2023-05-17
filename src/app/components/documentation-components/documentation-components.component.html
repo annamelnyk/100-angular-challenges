@@ -4,7 +4,12 @@
   iconClass="fa-solid fa-circle-exclamation"
 >
   <div body>
-    <app-modal title="Modal title" [isShown]="isModalOpen">
+    <app-modal
+      #modal
+      title="Modal title"
+      [isShown]="isModalOpen()"
+      (onModalClose)="closeModal()"
+    >
       <div modalBody class="modalEl-body">
         Minim cillum sunt aute id eiusmod quis. Officia exercitation officia
         laborum reprehenderit elit cupidatat officia ad pariatur voluptate. Ex
@@ -13,7 +18,10 @@
     </app-modal>
 
     <button (click)="showHideModal()" type="button" class="btn btn-danger m-3">
-      {{ isModalOpen ? "Close" : "Open" }} Modal
+      {{ isModalOpen() ? "Close" : "Open" }} Modal
+    </button>
+    <button (click)="modal.openModal()" type="button" class="btn btn-success m-3">
+      Call Modal
     </button>
   </div>
   <p footer>

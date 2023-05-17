@@ -1,9 +1,11 @@
-<div class="modalEl-overlay" *ngIf="isShown">
+<div class="modalEl-overlay" *ngIf="isShown" (click)="closeModal()">
   <div class="modalEl">
     <div class="modalEl-header">
       <h3 class="modalEl-title">{{title}}</h3>
       <i class="fa-sharp fa-regular fa-circle-xmark modalEl-close" (click)="closeModal()"></i>
     </div>
-    <ng-content class="modalEl-body" select="[modalBody]"></ng-content>
+    <div class="modalEl-body">
+      <ng-content select="[modalBody]"></ng-content>
+    </div>
   </div>
 </div>
