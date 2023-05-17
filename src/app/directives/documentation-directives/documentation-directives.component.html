@@ -1,1 +1,11 @@
-<p>documentation-directives works!</p>
+<app-card
+  title="Debounce Click"
+  subTitle="Directive"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <button type="button" class="btn btn-primary" appDebounce (debounceClick)="logMessage()
+    ">Debounce Click</button>
+  </div>
+  <p footer>Create a directive that debounces a click event for up to 500ms.</p>
+</app-card>
