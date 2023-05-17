@@ -1,4 +1,34 @@
 <app-card
+  title="Flatten"
+  subTitle="Pipe"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <div>{{ flattenData | flatten }}</div>
+    <div class="my-3">
+      <button
+        type="button"
+        class="btn btn-primary me-2"
+        (click)="modifyFlattenData()"
+      >
+        Modify
+      </button>
+      <button
+        type="button"
+        class="btn btn-primary"
+        (click)="reassignFlattenData()"
+      >
+        Reassign
+      </button>
+    </div>
+  </div>
+  <p footer>
+    Build a pipe that takes in an array of any values and flatten out to a
+    single array. Make the impure.
+  </p>
+</app-card>
+
+<app-card
   title="Credit Card Formatter"
   subTitle="Pipe"
   iconClass="fa-solid fa-circle-exclamation"
@@ -10,6 +40,12 @@
     <p>{{ "11112222333344445555" | creditCardFormatter }}</p>
     <p>{{ "1111222233hhhh44" | creditCardFormatter }}</p>
   </div>
+  <p footer>
+    Build a pipe that takes in a credit card number stored as a string such as
+    '1111222233334444'. If in the correct form return it dashed. If in the
+    incorrect form return an error for invalid length or an error for invalid
+    characters.
+  </p>
 </app-card>
 
 <app-card
@@ -22,5 +58,10 @@
       "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum a qui unde illo assumenda ipsum dolorem tenetur? Similique, porro beatae eveniet esse, aliquid doloribus enim, dolorum facere accusamus facilis deleniti!"
         | truncate : 55 : "[...]"
     }}
+  </p>
+  <p footer>
+    Build a pipe that truncates text that is longer than 100 characters by
+    default, but is configurable. If it is longer than the maximum length append
+    '...'.
   </p>
 </app-card>

@@ -8,9 +8,10 @@ import { SharedModule } from '../shared/shared.module';
 import { TruncatePipe } from './truncate/truncate.pipe';
 import { CreditCardFormatterPipe } from './credit-card-formatter/credit-card-formatter.pipe';
 import { CreditCardEncriptedPipe } from './creditCardEncripted/credit-card-encripted.pipe';
+import { FlattenPipe } from './flatten/flatten.pipe';
 
 @NgModule({
-  declarations: [DocumentationPipesComponent, TruncatePipe],
+  declarations: [DocumentationPipesComponent, TruncatePipe, FlattenPipe],
   imports: [CommonModule, SharedModule, RouterModule.forChild(PIPES_ROUTES)],
 })
 export class PipesModule {}
