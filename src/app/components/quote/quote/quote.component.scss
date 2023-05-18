@@ -1,0 +1,37 @@
+@import "../../../../styles";
+
+.quote {
+  color: $c-font-light;
+  font-size: 16px;
+  text-transform: capitalize;
+
+  &-icon {
+    margin-top: 20px;
+    font-size: 35px;
+    color: $c-font-light;
+  }
+
+  &-container {
+    padding: 20px 30px;
+    background-color: $c-primary;
+    min-height: 200px;
+  }
+
+  &-info {
+    text-align: right;
+  }
+
+  &-author {
+    font-size: 20px;
+    font-weight: bolder;
+    color: $c-font-light;
+    margin-bottom: 0;
+
+    &-details {
+      font-style: italic;
+      font-size: 18px;
+      color: $c-font-light;
+      margin-bottom: 0;
+    }
+  }
+}

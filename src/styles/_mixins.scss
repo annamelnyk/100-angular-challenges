@@ -100,3 +100,9 @@
   z-index: $z-overlay;
   backdrop-filter: blur(4px);
 }
+
+@mixin pseudoFontAwesome($unicode) { /* "\f1111" */
+  font-family: 'Font Awesome\ 6 Free';
+  content: $unicode; /* FontAwesome Unicode */
+  font-weight: 400;
+}

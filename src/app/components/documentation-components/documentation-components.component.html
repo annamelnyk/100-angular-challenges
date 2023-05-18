@@ -1,4 +1,21 @@
 <app-card
+  title="Quote"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <app-quote
+    body
+    [quote]="quoteText"
+    [quoteAuthor]="quoteAuthor"
+    [quoteAuthorOccupation]="quoteAuthorOccupation"
+  >
+  </app-quote>
+  <p footer>
+    Build a quote component that takes in a quote, author and occupation.
+  </p>
+</app-card>
+
+<app-card
   title="Modal"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"
@@ -20,7 +37,11 @@
     <button (click)="showHideModal()" type="button" class="btn btn-danger m-3">
       {{ isModalOpen() ? "Close" : "Open" }} Modal
     </button>
-    <button (click)="modal.openModal()" type="button" class="btn btn-success m-3">
+    <button
+      (click)="modal.openModal()"
+      type="button"
+      class="btn btn-success m-3"
+    >
       Call Modal
     </button>
   </div>

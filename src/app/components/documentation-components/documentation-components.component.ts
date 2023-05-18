@@ -1,9 +1,4 @@
-import {
-  Component,
-  HostListener,
-  signal,
-  WritableSignal,
-} from '@angular/core';
+import { Component, HostListener, signal, WritableSignal } from '@angular/core';
 
 import { IAccordionItem, LoaderType } from 'src/app/types';
 import { accordionData } from 'src/app/data';
@@ -26,6 +21,12 @@ export class DocumentationComponentsComponent {
       this.isLoaderOn = false;
     }
   }
+
+  public quoteText: string =
+    'Tempor dolore sit consequat amet veniam irure do. Velit consectetur veniam occaecat ea elit incididunt nostrud ea esse labore eiusmod dolor amet. Ut nulla non quis laborum velit pariatur fugiat. Aliquip minim do mollit qui aliquip ipsum do excepteur eiusmod mollit irure in. Ad et duis cupidatat commodo voluptate eiusmod non minim ipsum consectetur enim eiusmod aute proident.';
+  public quoteAuthor: string = 'Anna Melnyk';
+  public quoteAuthorOccupation: string = 'Software Engineer';
+
 
   public showHideModal() {
     this.isModalOpen.update((value: boolean) => (value = !value));
