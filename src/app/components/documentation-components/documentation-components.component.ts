@@ -27,7 +27,6 @@ export class DocumentationComponentsComponent {
   public quoteAuthor: string = 'Anna Melnyk';
   public quoteAuthorOccupation: string = 'Software Engineer';
 
-
   public showHideModal() {
     this.isModalOpen.update((value: boolean) => (value = !value));
   }

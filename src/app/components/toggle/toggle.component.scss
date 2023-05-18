@@ -1,0 +1,38 @@
+@import "../../../styles";
+
+$period-size: 15px;
+$gap: 2px;
+
+.toggle {
+  &-container {
+    border: 1px solid $c-font-dark;
+    border-radius: 15px;
+    height: 20px;
+    width: 60px;
+    cursor: pointer;
+    position: relative;
+  }
+
+  &-period {
+    width: $period-size;
+    height: $period-size;
+    border-radius: 50%;
+    position: absolute;
+    transition: all 1s ease-in-out;
+
+    &.toggle-on {
+      right: $gap;
+      left: calc(100% - $period-size - $gap);
+      top: 50%;
+      transform: translate(0, -50%);
+      background-color: green;
+    }
+    &.toggle-off {
+      left: $gap;
+      right: calc(100% - $gap);
+      top: 50%;
+      transform: translate(0, -50%);
+      background-color: red;
+    }
+  }
+}

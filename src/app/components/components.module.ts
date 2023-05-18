@@ -16,6 +16,7 @@ import { TwitterPostComponent } from './twitter-post/twitter-post/twitter-post.c
 import { LinkedInPostComponent } from './linkedIn-post/linked-in-post/linked-in-post.component';
 import { ModalComponent } from './modal/modal.component';
 import { QuoteComponent } from './quote/quote/quote.component';
+import { ToggleComponent } from './toggle/toggle.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { QuoteComponent } from './quote/quote/quote.component';
     TwitterPostComponent,
     LinkedInPostComponent,
     ModalComponent,
-    QuoteComponent
+    QuoteComponent,
+    ToggleComponent
   ],
   imports: [
     CommonModule,
