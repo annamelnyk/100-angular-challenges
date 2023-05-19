@@ -1,4 +1,26 @@
 <app-card
+  title="Rich Text Viewer"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <h4>Good Example</h4>
+    <app-rich-text-viewer
+      [content]="'<p>Hello world!</p>'"
+    ></app-rich-text-viewer>
+    <h4>Empty Example</h4>
+    <app-rich-text-viewer [content]="'  '"></app-rich-text-viewer>
+    <h4>Empty Tag</h4>
+    <app-rich-text-viewer [content]="'<p></p>'"></app-rich-text-viewer>
+  </div>
+
+  <p footer>
+    Create a rich text output component that strips out the html when it is
+    invalid or empty.
+  </p>
+</app-card>
+
+<app-card
   title="Toggle"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"
