@@ -1,0 +1,40 @@
+@import "../../../styles";
+
+$button-size: 50px;
+
+.counter {
+  &-container {
+    width: 400px;
+    height: $button-size;
+    display: flex;
+  }
+
+  &-plus,
+  &-minus {
+    width: $button-size;
+    height: $button-size;
+    color: $c-font-light;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    outline: none;
+    border: 1px solid;
+    padding: 5px;
+    cursor: pointer;
+  }
+
+  &-minus {
+    background-color: $red;
+    border-color: $red;
+  }
+  &-plus {
+    background-color: $green;
+    border-color: $green;
+  }
+  &-input {
+    height: 100%;
+    border: 1px solid $light-grey;
+    padding: 5px 15px;
+    font-weight: bold;
+  }
+}
