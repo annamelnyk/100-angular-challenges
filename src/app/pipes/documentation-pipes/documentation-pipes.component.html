@@ -1,4 +1,20 @@
 <app-card
+  title="Filter Term"
+  subTitle="Pipe"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <p>{{ ['Hello world', 'boo', 'hello'] | filterTerm: 'hello' }}</p>
+    <p>{{ ['Hello world', 'boo', 'hello'] | filterTerm: 'he' }}</p>
+    <p>{{ ['Hello world', 'boo', 'hello'] | filterTerm: 'bo' }}</p>
+  </div>
+  <p footer>
+    Build a pipe that takes in an array of strings and filters it by a string.
+
+  </p>
+</app-card>
+
+<app-card
   title="Flatten"
   subTitle="Pipe"
   iconClass="fa-solid fa-circle-exclamation"
