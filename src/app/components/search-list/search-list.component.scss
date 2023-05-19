@@ -1,0 +1,19 @@
+@import "../../../styles";
+
+.search-list {
+  list-style-type: none;
+  padding: 0;
+
+  &-container {
+    width: 250px;
+  }
+
+  &-search {
+    width: 100%;
+    margin-bottom: 15px;
+  }
+
+  &-item {
+    @include block-padding();
+  }
+}

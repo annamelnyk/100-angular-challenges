@@ -1,9 +1,24 @@
 <app-card
+  title="Search List"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <app-search-list body [searchList]="countriesList"></app-search-list>
+  <p footer>
+    Build a search list component that displays a list of possible strings that
+    matches.
+  </p>
+</app-card>
+
+<app-card
   title="Debounce Search"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"
 >
-  <app-debounce-search (debounceInputs)="debounceSearch($event)" body></app-debounce-search>
+  <app-debounce-search
+    (debounceInputs)="debounceSearch($event)"
+    body
+  ></app-debounce-search>
 
   <p footer>
     Build a debounce search input that notifies the parent of its value updating

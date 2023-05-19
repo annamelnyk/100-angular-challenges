@@ -16,6 +16,13 @@ export class DocumentationComponentsComponent {
   public loaderType: LoaderType = LoaderType.Loading;
   public isModalOpen: WritableSignal<boolean> = signal<boolean>(false);
   public debounceSearchValue: string ='';
+  public countriesList: string[] = [
+    'Ukraine',
+    'United States',
+    'Australia',
+    'France',
+    'Armenia',
+  ];
 
   @HostListener('document:keydown', ['$event'])
   onKeydownHandler(event: KeyboardEvent) {
