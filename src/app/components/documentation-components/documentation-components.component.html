@@ -1,4 +1,17 @@
 <app-card
+  title="Debounce Search"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <app-debounce-search (debounceInputs)="debounceSearch($event)" body></app-debounce-search>
+
+  <p footer>
+    Build a debounce search input that notifies the parent of its value updating
+    every 250ms.
+  </p>
+</app-card>
+
+<app-card
   title="Rich Text Viewer"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"

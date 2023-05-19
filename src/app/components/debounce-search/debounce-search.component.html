@@ -1,0 +1,8 @@
+<div class="debounce-search-container">
+  <input
+    type="search"
+    class="debounce-search-input"
+    [(ngModel)]="searchValue"
+    (ngModelChange)="updateSearch($event)"
+  />
+</div>

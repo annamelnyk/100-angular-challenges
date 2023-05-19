@@ -2,6 +2,7 @@ import { Component, HostListener, signal, WritableSignal } from '@angular/core';
 
 import { IAccordionItem, LoaderType } from 'src/app/types';
 import { accordionData } from 'src/app/data';
+import { Subject } from 'rxjs';
 
 @Component({
   selector: 'app-documentation-components',
@@ -14,6 +15,7 @@ export class DocumentationComponentsComponent {
   public isLoaderOn: boolean = false;
   public loaderType: LoaderType = LoaderType.Loading;
   public isModalOpen: WritableSignal<boolean> = signal<boolean>(false);
+  public debounceSearchValue: string ='';
 
   @HostListener('document:keydown', ['$event'])
   onKeydownHandler(event: KeyboardEvent) {
@@ -43,5 +45,10 @@ export class DocumentationComponentsComponent {
   turnOnLoadingLoader() {
     this.loaderType = LoaderType.Loading;
     this.isLoaderOn = true;
+  }
+
+  debounceSearch(value: string): void {
+    console.log(value);
+    this.debounceSearchValue = value;
   }
 }
