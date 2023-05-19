@@ -15,5 +15,11 @@
 
   &-item {
     @include block-padding();
+
+    &:hover {
+      cursor: pointer;
+      background-color: $blue;
+      color: $c-font-light;
+    }
   }
 }
