@@ -1,0 +1,24 @@
+@import "../../../styles";
+
+.simple-table {
+  tbody tr {
+    &:hover {
+      background-color: #f5f3f3cb;
+    }
+  }
+
+  &-th,
+  &-td {
+    padding: 10px 15px;
+    min-width: 100px;
+    border-bottom: 1px solid rgb(229, 224, 224);
+  }
+  &-th {
+    font-weight: bold;
+    text-transform: capitalize;
+  }
+
+  &-td {
+    text-transform: uppercase;
+  }
+}

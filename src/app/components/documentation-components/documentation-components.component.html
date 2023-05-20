@@ -1,4 +1,20 @@
 <app-card
+  title="Simple Table"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <app-simple-table [tableData]="simpleTableUsers"></app-simple-table>
+    <br />
+    <app-simple-table [tableData]="simpleTablePlanets"></app-simple-table>
+  </div>
+
+  <p footer>
+    Build a simple table that takes a list of objects and outputs the values.
+  </p>
+</app-card>
+
+<app-card
   title="Counter Input"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"

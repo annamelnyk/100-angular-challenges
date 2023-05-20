@@ -21,6 +21,7 @@ import { RichTextViewerComponent } from './rich-text-viewer/rich-text-viewer.com
 import { DebounceSearchComponent } from './debounce-search/debounce-search.component';
 import { SearchListComponent } from './search-list/search-list.component';
 import { CounterInputComponent } from './counter-input/counter-input.component';
+import { SimpleTableComponent } from './simple-table/simple-table.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import { CounterInputComponent } from './counter-input/counter-input.component';
     RichTextViewerComponent,
     DebounceSearchComponent,
     SearchListComponent,
-    CounterInputComponent
+    CounterInputComponent,
+    SimpleTableComponent
   ],
   imports: [
     CommonModule,

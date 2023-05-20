@@ -1,8 +1,16 @@
 import { Component, HostListener, signal, WritableSignal } from '@angular/core';
 
-import { IAccordionItem, LoaderType } from 'src/app/types';
-import { accordionData } from 'src/app/data';
-import { Subject } from 'rxjs';
+import {
+  IAccordionItem,
+  LoaderType,
+  IUserData,
+  IPlanetData,
+} from 'src/app/types';
+import {
+  accordionData,
+  simpleTablePlanetData,
+  simpleTableUserData,
+} from 'src/app/data';
 
 @Component({
   selector: 'app-documentation-components',
@@ -15,7 +23,7 @@ export class DocumentationComponentsComponent {
   public isLoaderOn: boolean = false;
   public loaderType: LoaderType = LoaderType.Loading;
   public isModalOpen: WritableSignal<boolean> = signal<boolean>(false);
-  public debounceSearchValue: string ='';
+  public debounceSearchValue: string = '';
   public countriesList: string[] = [
     'Ukraine',
     'United States',
@@ -23,6 +31,8 @@ export class DocumentationComponentsComponent {
     'France',
     'Armenia',
   ];
+  public simpleTablePlanets: IPlanetData[] = simpleTablePlanetData;
+  public simpleTableUsers: IUserData[] = simpleTableUserData;
 
   @HostListener('document:keydown', ['$event'])
   onKeydownHandler(event: KeyboardEvent) {
