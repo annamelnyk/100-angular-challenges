@@ -1,0 +1,45 @@
+@import "../../../styles";
+
+$circle-size: 50px;
+
+.paging {
+  &-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &-arrow,
+  &-item {
+    text-align: center;
+    @include box-shadow();
+    width: $circle-size;
+    height: $circle-size;
+    line-height: $circle-size;
+    border-radius: 50%;
+    color: $c-font-dark;
+    font-size: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+
+  &-arrow {
+    &.disabled {
+      cursor: not-allowed;
+      i {
+        color: $light-grey;
+      }
+    }
+  }
+
+  &-item {
+    &.active,
+    &:hover {
+      background-color: $blue;
+      color: $c-font-light;
+      margin-top: -5px;
+      transition: margin-top .2s ease-out;
+    }
+  }
+}
