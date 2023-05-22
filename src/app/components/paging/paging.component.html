@@ -9,11 +9,11 @@
   </div>
   <div
     class="paging-item"
-    *ngFor="let pageNum of iterableAmountOfPages; let i = index"
-    [class.active]="isActivePage(i + 1)"
-    (click)="goToPage(i + 1)"
+    *ngFor="let pageNum of iterableAmountOfPages"
+    [class.active]="isActivePage(pageNum)"
+    (click)="goToPage(pageNum)"
   >
-    {{ i + 1 }}
+    {{ pageNum }}
   </div>
   <div
     class="paging-arrow"

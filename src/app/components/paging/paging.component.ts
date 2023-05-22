@@ -23,7 +23,11 @@ export class PagingComponent {
       pages += 1;
     }
 
-    this.iterableAmountOfPages = new Array(pages).fill('');
+    if (!this.iterableAmountOfPages.length) {
+      for (let page = 1; page <= pages; page++) {
+        this.iterableAmountOfPages.push(page);
+      }
+    }
 
     return pages;
   }
@@ -47,7 +51,7 @@ export class PagingComponent {
 
   public nextPage(): void {
     if (this.isNextStepDisabled()) return;
-    
+
     let nextStep = this.currentPage + this.step;
     let updatedPage;
 
@@ -57,8 +61,7 @@ export class PagingComponent {
       updatedPage = this.amountOfPages;
     }
 
-    this.currentPage = updatedPage;
-    this.pageChange.emit(updatedPage);
+    this.goToPage(updatedPage);
   }
 
   public prevPage(): void {
@@ -72,7 +75,7 @@ export class PagingComponent {
     } else {
       updatedPage = 1;
     }
-    this.currentPage = updatedPage;
-    this.pageChange.emit(updatedPage);
+
+    this.goToPage(updatedPage);
   }
 }
