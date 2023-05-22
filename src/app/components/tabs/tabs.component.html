@@ -1,0 +1,16 @@
+<div class="tabs-container">
+  <ul class="tabs-list">
+    <li
+      *ngFor="let tab of tabsList; let i = index"
+      class="tabs-item"
+      [class.active]="i === selectedTabIndex"
+    >
+      <h3 class="tabs-item-header" (click)="selectTab(tab, i)">
+        {{ tab.name }}
+      </h3>
+    </li>
+  </ul>
+
+  <ng-content select="[paging]" *ngIf="selectedTabIndex === 0"></ng-content>
+  <ng-content select="[counter]" *ngIf="selectedTabIndex === 1"></ng-content>
+</div>

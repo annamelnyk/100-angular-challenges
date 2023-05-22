@@ -60,8 +60,6 @@ export class PagingComponent {
     } else {
       updatedPage = this.amountOfPages;
     }
-
-    this.goToPage(updatedPage);
   }
 
   public prevPage(): void {

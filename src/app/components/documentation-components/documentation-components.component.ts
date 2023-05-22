@@ -5,6 +5,7 @@ import {
   LoaderType,
   IUserData,
   IPlanetData,
+  ITab,
 } from 'src/app/types';
 import {
   accordionData,
@@ -49,6 +50,17 @@ export class DocumentationComponentsComponent {
 
   onPageChange(value: number): void {
     this.currentPage = value;
+  }
+
+  // Tabs
+  public tabs: Array<ITab> = [
+    { name: 'Tab 1', active: false, id: 'tab1' },
+    { name: 'Tab 2', active: true, id: 'tab2' },
+  ];
+  public selectedTabIndex: number = 0;
+
+  public onSelectTab(index: number) {
+    this.selectedTabIndex = index;
   }
 
   // Loader

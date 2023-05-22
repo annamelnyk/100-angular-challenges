@@ -25,3 +25,9 @@ export interface IPlanetData {
   'surface water': number;
   population: number;
 }
+
+export interface ITab {
+  name: string;
+  active: boolean;
+  id: string;
+}

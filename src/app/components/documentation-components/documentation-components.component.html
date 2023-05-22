@@ -1,4 +1,24 @@
 <app-card
+  title="Tabs"
+  subTitle="Component"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <app-tabs
+    body
+    [tabsList]="tabs"
+    [selectedTabIndex]="selectedTabIndex"
+    (selectedTab)="onSelectTab($event)"
+  >
+    <app-paging paging (pageChange)="onPageChange($event)"></app-paging>
+    <app-counter-input counter></app-counter-input>
+  </app-tabs>
+  <p footer>
+    Build a Tab component that takes in an array of tabs and displays the
+    content selected.
+  </p>
+</app-card>
+
+<app-card
   title="Paging"
   subTitle="Component"
   iconClass="fa-solid fa-circle-exclamation"
@@ -6,7 +26,7 @@
   <app-paging
     body
     [totalAmountOfItems]="pagingDataToDisplay.length"
-    [amountOfItemsPerPage]="2"
+    [amountOfItemsPerPage]="5"
     (pageChange)="onPageChange($event)"
   ></app-paging>
   <p footer>

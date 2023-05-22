@@ -1,0 +1,28 @@
+@import "../../../styles";
+
+.tabs {
+  &-list {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+  }
+
+  &-item {
+    @include box-shadow();
+    cursor: pointer;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+
+    &.active {
+      border-bottom: 4px solid $blue;
+      box-shadow: none;
+    }
+
+    &-header {
+      font-weight: bold;
+      font-size: 25px;
+      @include block-padding();
+    }
+  }
+}
