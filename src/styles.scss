@@ -48,18 +48,18 @@ button {
 // Directives styles
 .ripple {
   background-position: center;
-  transition: background 0.8s;
+  transition: background 1.5s;
   @include box-shadow();
   
 
   &:hover {
-    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+    background: $ripple-blue radial-gradient(circle, transparent 1%, $ripple-blue 1%) center/15000%;
     color: $c-font-light;    
   }
 
   &:active {
-    background-color: #6eb9f7;
+    background-color: $c-font-light;
     background-size: 100%;
-    transition: background 0s;
+    transition: all 0s;
   }
 }
