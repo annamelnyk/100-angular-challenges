@@ -22,4 +22,9 @@ export const APP_ROUTES: Routes = [
     loadChildren: () =>
       import('./services/services.module').then((m) => m.ServicesModule),
   },
+  {
+    path: 'other',
+    loadChildren: () =>
+      import('./other/other.module').then((m) => m.OtherModule),
+  },
 ];
