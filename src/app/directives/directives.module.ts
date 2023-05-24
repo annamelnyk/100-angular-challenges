@@ -6,9 +6,10 @@ import { DocumentationDirectivesComponent } from './documentation-directives/doc
 import { DIRECTIVES_ROUTES } from './directives.routes';
 import { SharedModule } from '../shared/shared.module';
 import { DebounceDirective } from './debounce/debounce.directive';
+import { RippleDirective } from './ripple/ripple.directive';
 
 @NgModule({
-  declarations: [DocumentationDirectivesComponent, DebounceDirective],
+  declarations: [DocumentationDirectivesComponent, DebounceDirective, RippleDirective],
   imports: [
     CommonModule,
     SharedModule,

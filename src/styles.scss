@@ -23,7 +23,7 @@
 
 h1,
 h2,
-h3{
+h3 {
   text-align: center;
   margin-bottom: 0;
   font-weight: bold;
@@ -35,7 +35,31 @@ h3 {
   }
 }
 
+button {
+  @include block-padding();
+  outline: none;
+}
+
 .block-bg {
   background-color: $block-bg;
   @include box-shadow;
+}
+
+// Directives styles
+.ripple {
+  background-position: center;
+  transition: background 0.8s;
+  @include box-shadow();
+  
+
+  &:hover {
+    background: #47a7f5 radial-gradient(circle, transparent 1%, #47a7f5 1%) center/15000%;
+    color: $c-font-light;    
+  }
+
+  &:active {
+    background-color: #6eb9f7;
+    background-size: 100%;
+    transition: background 0s;
+  }
 }

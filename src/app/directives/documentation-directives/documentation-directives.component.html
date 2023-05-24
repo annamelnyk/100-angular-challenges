@@ -1,11 +1,36 @@
 <app-card
+  title="Ripple"
+  subTitle="Directive"
+  iconClass="fa-solid fa-circle-exclamation"
+>
+  <div body>
+    <button
+      type="button"
+      appRipple
+    >
+      Ripple Button
+    </button>
+  </div>
+  <p footer>
+    Build a ripple directive that on hover changes color and on click ripples
+    across the element.
+  </p>
+</app-card>
+
+<app-card
   title="Debounce Click"
   subTitle="Directive"
   iconClass="fa-solid fa-circle-exclamation"
 >
   <div body>
-    <button type="button" class="btn btn-primary" appDebounce (debounceClick)="logMessage()
-    ">Debounce Click</button>
+    <button
+      type="button"
+      class="btn btn-primary"
+      appDebounce
+      (debounceClick)="logMessage()"
+    >
+      Debounce Click
+    </button>
   </div>
   <p footer>Create a directive that debounces a click event for up to 500ms.</p>
 </app-card>
