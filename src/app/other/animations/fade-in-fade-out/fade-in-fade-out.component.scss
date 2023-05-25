@@ -1,0 +1,11 @@
+@import "../../../../styles";
+
+.fade {
+  &-container {
+    @include block-padding();
+  }
+
+  &-nav {
+    display: block;
+  }
+}
